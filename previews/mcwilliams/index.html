@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>McWilliams Mobile Detailing | We Come To You</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#16202b; background:#f6f8fa; line-height:1.55; }
+  header { background:#0d2233; color:#fff; padding:34px 20px 30px; text-align:center; }
+  header h1 { font-size:30px; letter-spacing:.5px; }
+  header p.tag { color:#9fd8e8; font-size:16px; margin-top:6px; }
+  .stars { margin-top:12px; font-size:15px; color:#ffd257; }
+  .stars span { color:#dbe7ee; }
+  .cta-row { display:flex; gap:12px; justify-content:center; margin-top:20px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:13px 26px; border-radius:8px; font-weight:700; font-size:16px; text-decoration:none; }
+  .btn-call { background:#ffb81c; color:#16202b; }
+  .btn-text { background:#fff; color:#0d2233; }
+  main { max-width:860px; margin:0 auto; padding:26px 18px 60px; }
+  h2 { font-size:21px; margin:30px 0 12px; color:#0d2233; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .card { background:#fff; border:1px solid #dde5ea; border-radius:10px; padding:18px; }
+  .card h3 { font-size:17px; margin-bottom:6px; }
+  .card p { font-size:14.5px; color:#43525e; }
+  .card .quote { margin-top:10px; font-weight:600; color:#0d2233; font-size:14px; }
+  .cities { background:#fff; border:1px solid #dde5ea; border-radius:10px; padding:18px; font-size:15px; }
+  .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .slot { background:#e8eef2; border:2px dashed #b9c9d3; border-radius:10px; height:120px; display:flex; align-items:center; justify-content:center; text-align:center; color:#5b7182; font-size:13.5px; padding:10px; }
+  .about { font-size:15.5px; }
+  footer { background:#0d2233; color:#cfe0ea; text-align:center; padding:22px 16px; font-size:14px; }
+  footer a { color:#ffd257; text-decoration:none; font-weight:700; }
+  /* Chat helper */
+  #chatBtn { position:fixed; right:18px; bottom:18px; background:#0d2233; color:#fff; border:none; border-radius:999px; padding:14px 20px; font-size:15px; font-weight:700; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,.25); z-index:50; }
+  #chatBox { position:fixed; right:18px; bottom:78px; width:min(92vw,340px); background:#fff; border:1px solid #cfdce4; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.25); display:none; flex-direction:column; overflow:hidden; z-index:50; }
+  #chatBox.open { display:flex; }
+  #chatHead { background:#0d2233; color:#fff; padding:12px 14px; font-weight:700; font-size:14.5px; }
+  #chatHead small { display:block; font-weight:400; color:#9fd8e8; font-size:12px; }
+  #chatMsgs { padding:12px; height:260px; overflow-y:auto; font-size:14px; }
+  .msg { margin-bottom:10px; padding:9px 11px; border-radius:10px; max-width:88%; }
+  .msg.bot { background:#eef4f7; }
+  .msg.me { background:#fff3cf; margin-left:auto; }
+  #chatForm { border-top:1px solid #e2eaef; padding:10px; }
+  #chatForm input, #chatForm select { width:100%; padding:9px; margin-bottom:8px; border:1px solid #c4d2db; border-radius:7px; font-size:14px; }
+  #chatForm button { width:100%; background:#ffb81c; border:none; padding:11px; border-radius:7px; font-weight:700; font-size:14.5px; cursor:pointer; }
+  .chips { padding:0 12px 10px; display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { background:#eef4f7; border:1px solid #cfdce4; border-radius:999px; padding:6px 11px; font-size:12.5px; cursor:pointer; }
+</style>
+</head>
+<body>
+<header>
+  <h1>McWilliams Mobile Detailing</h1>
+  <p class="tag">We come to you. Mobile detailing in the Mid-Cities.</p>
+  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8 <span>on Google &middot; Open 7 days a week</span></div>
+  <div class="cta-row">
+    <a class="btn btn-call" href="tel:+18174894908">Call (817) 489-4908</a>
+    <a class="btn btn-text" href="sms:+18174894908">Text Us</a>
+  </div>
+</header>
+<main>
+  <h2>Our Packages</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Full Detail</h3>
+      <p>Inside and out, top to bottom. The whole car, done right, at your home or work.</p>
+      <p class="quote">Call or message for a quote.</p>
+    </div>
+    <div class="card">
+      <h3>Interior Detail</h3>
+      <p>Seats, carpets, dash, and glass. For cars that carry kids, dogs, and daily life.</p>
+      <p class="quote">Call or message for a quote.</p>
+    </div>
+    <div class="card">
+      <h3>Exterior Detail</h3>
+      <p>Hand wash, wheels, tires, and shine. The clean your neighbors notice.</p>
+      <p class="quote">Call or message for a quote.</p>
+    </div>
+  </div>
+
+  <h2>Where We Work</h2>
+  <div class="cities">
+    We are mobile, so we come to you in <strong>Hurst, Keller, Bedford, Watauga, Grapevine, Fort Worth, Southlake, and North Richland Hills</strong>. All we need is a spot to work.
+  </div>
+
+  <h2>Our Work</h2>
+  <div class="gallery">
+    <div class="slot">Before and after photos go here</div>
+    <div class="slot">Before and after photos go here</div>
+    <div class="slot">Before and after photos go here</div>
+    <div class="slot">Before and after photos go here</div>
+    <div class="slot">Before and after photos go here</div>
+    <div class="slot">Before and after photos go here</div>
+  </div>
+
+  <h2>Why People Call Us</h2>
+  <p class="about">Our customers use one word a lot: meticulous. We take our time, we do it right, and we treat your car like it is our own. When we are done, your car looks the way you remember it looking the day you fell for it.</p>
+</main>
+<footer>
+  McWilliams Mobile Detailing &middot; Open 7 days &middot; <a href="tel:+18174894908">(817) 489-4908</a>
+</footer>
+
+<button id="chatBtn" onclick="toggleChat()">Chat with our helper</button>
+<div id="chatBox">
+  <div id="chatHead">McWilliams Helper<small>This is an automated helper, not a person. It takes messages for Kyle.</small></div>
+  <div id="chatMsgs">
+    <div class="msg bot">Hi, I am the McWilliams helper. Ask me about prices, areas we serve, or booking, and I will help or take a message for Kyle.</div>
+  </div>
+  <div class="chips">
+    <span class="chip" onclick="ask('How much does it cost?')">Prices</span>
+    <span class="chip" onclick="ask('Do you come to my city?')">Areas served</span>
+    <span class="chip" onclick="ask('How do I book?')">Booking</span>
+    <span class="chip" onclick="ask('Can you get out a bad stain or smell?')">Stains and smells</span>
+  </div>
+  <form id="chatForm" onsubmit="return sendMsg(event)">
+    <input id="chatInput" type="text" placeholder="Type your question..." autocomplete="off">
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+var box = document.getElementById('chatBox');
+function toggleChat(){ box.classList.toggle('open'); }
+function addMsg(text, who){
+  var d = document.createElement('div');
+  d.className = 'msg ' + who; d.textContent = text;
+  var m = document.getElementById('chatMsgs');
+  m.appendChild(d); m.scrollTop = m.scrollHeight;
+}
+function answer(q){
+  q = q.toLowerCase();
+  if (q.indexOf('cost')>-1 || q.indexOf('price')>-1 || q.indexOf('much')>-1 || q.indexOf('package')>-1){
+    return 'Prices are set by package and by the car, the same way our Google profile works today. If you leave your name and number, Kyle will send you a quote. Want me to take your details?';
+  }
+  if (q.indexOf('city')>-1 || q.indexOf('come to')>-1 || q.indexOf('area')>-1 || q.indexOf('where')>-1 || q.indexOf('cover')>-1){
+    return 'Yes, we are mobile and we come to you. We serve Hurst, Keller, Bedford, Watauga, Grapevine, Fort Worth, Southlake, and North Richland Hills. Outside those cities, I can still take a message for Kyle.';
+  }
+  if (q.indexOf('book')>-1 || q.indexOf('schedule')>-1 || q.indexOf('appointment')>-1 || q.indexOf('soon')>-1){
+    return 'Easy. Leave your name, your phone number, your car, and what you want done, and Kyle gets it right away. Or tap the Call or Text button at the top of this page.';
+  }
+  if (q.indexOf('stain')>-1 || q.indexOf('smell')>-1 || q.indexOf('pet')>-1 || q.indexOf('hair')>-1 || q.indexOf('odor')>-1){
+    return 'Most stains, smells, and pet hair get much better with a full interior detail, but every car is different and I have not seen yours. Kyle can give you a straight answer and a quote if you leave your number.';
+  }
+  if (q.indexOf('hour')>-1 || q.indexOf('open')>-1 || q.indexOf('when')>-1){
+    return 'We are open 7 days a week. Call or text (817) 489-4908 and Kyle will set a time that works for you.';
+  }
+  if (q.indexOf('long')>-1 || q.indexOf('take')>-1){
+    return 'That depends on the package and the car, so I do not want to guess. Leave your number and Kyle will tell you straight.';
+  }
+  return 'I do not know that one yet, and I do not want to guess. Leave your name and number and Kyle will get back to you. Or call or text (817) 489-4908.';
+}
+function ask(q){ addMsg(q,'me'); setTimeout(function(){ addMsg(answer(q),'bot'); }, 350); }
+function sendMsg(e){
+  e.preventDefault();
+  var i = document.getElementById('chatInput');
+  var v = i.value.trim(); if(!v) return false;
+  i.value=''; ask(v); return false;
+}
+</script>
+</body>
+</html>
