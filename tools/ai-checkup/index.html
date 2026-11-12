@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>AI Checkup | Adtani Education Ventures</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header shell">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span> AI Checkup</div>
+    <p>For local business owners</p>
+  </header>
+  <main class="shell">
+    <noscript><p>Turn on JavaScript to take the checkup.</p></noscript>
+    <div id="quiz" class="quiz-layout">
+      <aside class="intro">
+        <p class="intro-title">Find what to fix first.</p>
+        <p>Answer 12 questions about how customers find, reach and book you. Get a score and three fixes you can use.</p>
+      </aside>
+      <form id="quiz-form" class="card" novalidate>
+        <div class="progress-line">
+          <span id="step-count">Question 1 of 12</span>
+          <span id="step-topic">Google profile</span>
+        </div>
+        <progress id="progress" max="12" value="1" aria-label="Checkup progress"></progress>
+        <h1 id="step-title" tabindex="-1"></h1>
+        <p id="step-help" class="step-help"></p>
+        <div id="answer-area"></div>
+        <p id="quiz-error" class="error" role="alert"></p>
+        <div class="actions">
+          <button id="back" type="button" class="button secondary" hidden>Back</button>
+          <button id="next" type="submit" class="button primary">Continue</button>
+        </div>
+      </form>
+    </div>
+
+    <section id="report" class="report" hidden aria-labelledby="report-title">
+      <header class="report-top">
+        <div>
+          <p class="eyebrow">AI Checkup report</p>
+          <h1 id="report-title" tabindex="-1">Your business checkup</h1>
+          <p id="score-summary">Your score is based on the 11 questions with choices. Your note is separate.</p>
+        </div>
+        <div class="score" aria-describedby="score-summary">
+          <span class="score-label">Your score</span>
+          <div><strong id="score-number"></strong> <span>out of 100</span></div>
+          <span id="grade" class="grade"></span>
+        </div>
+      </header>
+      <section class="card report-section" aria-labelledby="fix-title">
+        <h2 id="fix-title">Your first three fixes</h2>
+        <ol id="fixes" class="fixes"></ol>
+      </section>
+      <section id="note-section" class="card report-section" aria-labelledby="note-title" hidden>
+        <h2 id="note-title">Your biggest headache</h2>
+        <p id="pain-note"></p>
+      </section>
+      <section class="booking" aria-labelledby="booking-title">
+        <div>
+          <h2 id="booking-title">Want help with the first fix?</h2>
+          <p>Bring this report to a free walkthrough and talk through what to try first.</p>
+        </div>
+        <div class="booking-action">
+          <a id="booking-link" class="button primary">Book my free walkthrough</a>
+          <p id="booking-status" class="booking-status" role="status"></p>
+        </div>
+      </section>
+      <div class="report-actions">
+        <button id="print" type="button" class="button secondary">Print report</button>
+        <button id="restart" type="button" class="button secondary">Start over</button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer shell">
+    <span>Adtani Education Ventures LLC</span>
+    <span id="save-status" role="status">Answers stay in this browser.</span>
+  </footer>
+</body>
+</html>

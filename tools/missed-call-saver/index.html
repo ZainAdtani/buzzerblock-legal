@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Missed Call Money Saver</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap masthead">
+      <div class="mark" aria-hidden="true">↗</div>
+      <span>Missed Call Money Saver</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <header class="intro">
+      <p class="eyebrow">Estimate calculator</p>
+      <h1>What do missed calls cost you?</h1>
+      <p>Use your own numbers to see how much work you might miss when calls go unanswered.</p>
+    </header>
+
+    <div class="calculator">
+      <section class="panel inputs" aria-labelledby="inputs-heading">
+        <div class="panel-head">
+          <h2 id="inputs-heading">Your numbers</h2>
+          <button id="load-demo" type="button" class="quiet-button">Load demo</button>
+        </div>
+        <p id="input-note" class="input-note">Demo numbers. Replace them with your own.</p>
+
+        <label for="calls">Missed calls per week</label>
+        <input id="calls" type="number" min="0" max="1000000" step="1" inputmode="numeric" placeholder="0" value="10">
+
+        <label for="job-value">Average job value in dollars</label>
+        <div class="currency-field">
+          <span aria-hidden="true">$</span>
+          <input id="job-value" type="number" min="0" max="1000000000" step="0.01" inputmode="decimal" placeholder="0" value="200">
+        </div>
+
+        <div class="slider-label">
+          <label for="share">Missed callers who never call back</label>
+          <output id="share-value" for="share">60%</output>
+        </div>
+        <input id="share" type="range" min="0" max="100" step="1" value="60" aria-valuetext="60 percent">
+        <div class="range-ends" aria-hidden="true"><span>0%</span><span>100%</span></div>
+      </section>
+
+      <section class="panel results" aria-labelledby="results-heading">
+        <h2 id="results-heading">Potential lost work</h2>
+        <div class="estimate" aria-live="polite" aria-atomic="true">
+          <div class="metric primary-metric">
+            <span class="metric-label">Lost money per year</span>
+            <strong id="annual-value">$62,400</strong>
+          </div>
+          <div class="secondary-metrics">
+            <div class="metric">
+              <span class="metric-label">Lost money per month</span>
+              <strong id="monthly-value">$5,200</strong>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Lost jobs per month</span>
+              <strong id="monthly-jobs">26</strong>
+            </div>
+          </div>
+        </div>
+        <p class="assumption">This estimate counts each missed caller who never calls back as one possible job. It uses 52 weeks per year and averages across 12 months. Actual results can vary.</p>
+      </section>
+    </div>
+
+    <section class="booking" aria-labelledby="booking-heading">
+      <div>
+        <h2 id="booking-heading">Give missed callers a way to reach you</h2>
+        <p>An instant text back sends a short reply when you miss a call. It lets the caller tell you what they need so you can reply when you’re free.</p>
+      </div>
+      <div class="booking-action">
+        <a id="booking-link" class="primary-button" target="_blank" rel="noopener noreferrer">Book my free walkthrough</a>
+        <p id="booking-note" role="status">Demo booking link</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">Adtani Education Ventures LLC</footer>
+</body>
+</html>
