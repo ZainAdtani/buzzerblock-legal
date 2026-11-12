@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn pasted video transcripts or notes into a five-part digest. Sort videos into Keep, Learn, or Drop. Your text stays in your browser.">
+  <title>Queue Digest | Video notes and playlist triage</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <span class="brand"><span class="mark" aria-hidden="true">Q</span> Queue Digest</span>
+      <span class="privacy">Runs in your browser</span>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Make your queue useful.</h1>
+      <p>Paste a video transcript or notes to get a digest you can save.<br>Use Triage to decide which videos are worth your time.</p>
+    </section>
+
+    <nav class="switch" aria-label="Choose a tool">
+      <button type="button" data-mode="digest" aria-pressed="true">Digest</button>
+      <button type="button" data-mode="triage" aria-pressed="false">Triage</button>
+    </nav>
+
+    <div class="workspace">
+      <form class="panel input-panel" id="source-form">
+        <div class="panel-head">
+          <h2><label for="source" id="source-label">Transcript or notes</label></h2>
+          <button type="button" class="secondary" id="sample">Try the sample</button>
+        </div>
+        <p id="source-help">Paste text from one video. Include at least three distinct points.</p>
+        <textarea id="source" rows="12" aria-describedby="source-help draft-status" spellcheck="false" placeholder="Paste your transcript or notes here…"></textarea>
+        <div class="form-bottom">
+          <button type="submit" class="primary" id="run">Make digest</button>
+          <p class="muted" id="draft-status">Drafts stay in this browser.</p>
+        </div>
+        <p id="source-status" role="status"></p>
+        <details id="digest-tips">
+          <summary>Want to choose what goes in the digest?</summary>
+          <p>Give any section its own line. Try <code>What this is:</code>, <code>Takeaway:</code>, <code>Move:</code>, <code>Money: Stretch</code>, or <code>Benefit:</code>. Add a reason after the money label.</p>
+        </details>
+      </form>
+
+      <section class="panel result-panel" aria-labelledby="result-title">
+        <div class="panel-head">
+          <div>
+            <p class="sample-badge" id="sample-badge" hidden>Sample · made up</p>
+            <h2 id="result-title" tabindex="-1">Your digest</h2>
+          </div>
+          <button type="button" class="secondary" id="copy" disabled>Copy digest</button>
+        </div>
+        <p class="muted" id="cleanup" hidden></p>
+        <p class="empty" id="empty">Your digest will appear here. Try the sample to see the format.</p>
+        <div id="result"></div>
+        <p id="copy-status" role="status"></p>
+        <textarea id="copy-text" rows="9" readonly hidden aria-label="Result text to copy"></textarea>
+      </section>
+    </div>
+
+    <footer>
+      <p>Built by Adtani Education Ventures</p>
+      <div class="footer-links">
+        <a href="https://calendly.com/zkadtani/job">Book a free intro call</a>
+        <a href="https://zainadtani.github.io/buzzerblock-legal/tools/ai-checkup/">Try the free AI Checkup</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
